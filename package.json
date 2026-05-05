@@ -1,0 +1,8 @@
+{
+  "name": "meridian-ops-deploy-meter",
+  "version": "0.1.0",
+  "type": "module",
+  "scripts": {
+    "test": "node tests/policy.test.js"
+  }
+}
