@@ -1,0 +1,32 @@
+{
+  "index": 441,
+  "phase": 2,
+  "batch": 49,
+  "name": "meridian-ops-deploy-meter",
+  "planned_name": "meridian-ops-deploy-meter",
+  "language": "JavaScript",
+  "category": "Automation",
+  "goal": "Develop a JavaScript command-oriented project for deploy scenarios with capacity fixtures, allocation and spill reports, and single-node deterministic mode.",
+  "repository_url": "https://github.com/ZachL111/meridian-ops-deploy-meter",
+  "verification_command": "powershell -NoProfile -ExecutionPolicy Bypass -File scripts/verify.ps1",
+  "model": {
+    "inputs": [
+      "demand",
+      "capacity",
+      "latency",
+      "risk",
+      "weight"
+    ],
+    "threshold": 175,
+    "risk_penalty": 6,
+    "latency_penalty": 2,
+    "weight_bonus": 4,
+    "decision_rule": "accept when score is greater than or equal to threshold, otherwise review"
+  },
+  "quality_gates": [
+    "readme constraint scan",
+    "fixture presence check",
+    "metadata JSON parse",
+    "language verifier"
+  ]
+}
